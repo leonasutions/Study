@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using fix.Models;
+using fix.ViewModel;
 
 namespace fix.Controllers
 {
@@ -19,8 +20,39 @@ namespace fix.Controllers
 
         public ActionResult New()
         {
-            return View();
+            var membershiptype = _context.MembershipTypes.ToList();
+            var viewModel = new CustomerFormViewModel
+            {
+                MembershipTypes = membershiptype
+            }
+            ;
+
+
+            return View("CustomerForm", viewModel);
         }
+        [HttpPost]
+        public ActionResult Save(Customers customers
+        )
+        {
+            if (customers.Id==0)
+            {
+                _context.Customers.Add(customers);
+            }
+            else
+            {
+                var customerInDb = _context.Customers.Single(c => c.Id == customers.Id);
+                customerInDb.Name = customers.Name;
+                customerInDb.Birthdate = customers.Birthdate;
+                customerInDb.MembershipTypeId = customers.MembershipTypeId;
+                customerInDb.IsSubscribedToNewsLetter = customers.IsSubscribedToNewsLetter;
+            }
+            _context.SaveChanges();
+
+
+
+            return RedirectToAction("Index", "Customer");
+        }
+
         protected override void Dispose(bool disposing)
         {
             _context.Dispose();
@@ -43,8 +75,22 @@ namespace fix.Controllers
 
             return View(customer);
         }
-        
 
-      
+
+        public ActionResult Edit(int id)
+        {
+            var customer = _context.Customers.SingleOrDefault(c => c.Id == id);
+            if (customer==null)
+            {
+                return HttpNotFound();
+            }
+
+            var viewModel = new CustomerFormViewModel
+            {
+                customers = customer,
+                MembershipTypes = _context.MembershipTypes.ToList()
+            };
+            return View("CustomerForm", viewModel);
+        }
     }
 }
