@@ -211,16 +211,34 @@
     <Compile Include="Migrations\201907170407568_PopulationMovies.Designer.cs">
       <DependentUpon>201907170407568_PopulationMovies.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201907170912067_AddGenreMovies.cs" />
+    <Compile Include="Migrations\201907170912067_AddGenreMovies.Designer.cs">
+      <DependentUpon>201907170912067_AddGenreMovies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201907170917250_InputDBGenre.cs" />
+    <Compile Include="Migrations\201907170917250_InputDBGenre.Designer.cs">
+      <DependentUpon>201907170917250_InputDBGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201907170945242_TryToRoll.cs" />
+    <Compile Include="Migrations\201907170945242_TryToRoll.Designer.cs">
+      <DependentUpon>201907170945242_TryToRoll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201907170952485_tryAddDBMoviesAgain.cs" />
+    <Compile Include="Migrations\201907170952485_tryAddDBMoviesAgain.Designer.cs">
+      <DependentUpon>201907170952485_tryAddDBMoviesAgain.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customers.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
-    <Compile Include="Models\Movies.cs" />
+    <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModel\CustomerFormViewModel.cs" />
+    <Compile Include="ViewModel\MoviesFormViewModel.cs" />
     <Compile Include="ViewModel\ViewCustModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -287,6 +305,7 @@
     <Content Include="Views\Movies\Index.cshtml" />
     <Content Include="Views\Movies\Detail.cshtml" />
     <Content Include="Views\Customer\CustomerForm.cshtml" />
+    <Content Include="Views\Movies\MoviesForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -331,6 +350,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201907170407568_PopulationMovies.resx">
       <DependentUpon>201907170407568_PopulationMovies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907170912067_AddGenreMovies.resx">
+      <DependentUpon>201907170912067_AddGenreMovies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907170917250_InputDBGenre.resx">
+      <DependentUpon>201907170917250_InputDBGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907170945242_TryToRoll.resx">
+      <DependentUpon>201907170945242_TryToRoll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907170952485_tryAddDBMoviesAgain.resx">
+      <DependentUpon>201907170952485_tryAddDBMoviesAgain.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

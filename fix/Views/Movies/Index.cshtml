@@ -1,25 +1,28 @@
 ﻿
-@model IEnumerable<fix.Models.Movies>
+@model IEnumerable<fix.Models.Movie>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
+<p>
+    @Html.ActionLink("New Movie", "New", "Movies", null, new { @class = "btn btn-primary" })
+</p>
 <table class="table table-bordered table-hover">
     <thead>
-        <tr>
-            <th>Movies</th>
-            <th>Genre</th>
-        </tr>
+
+    <tr>
+        <th>Movies</th>
+        <th>Genre</th>
+    </tr>
     </thead>
     <tbody>
         
         @foreach (var mov in Model)
         {
-            <tr>
-                <td>@Html.ActionLink(mov.Name, "Detail", "Movies", new { id = mov.Id }, null)</td>
-                <td>@mov.Genre</td>
-            </tr>
+        <tr>
+            <td>@Html.ActionLink(mov.Name, "Edit", "Movies", new { id = mov.Id }, null)</td>
+            <td>@mov.Genre.name </td>
+        </tr>
 
         }
     </tbody>

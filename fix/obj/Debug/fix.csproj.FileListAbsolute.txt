@@ -93,3 +93,7 @@ C:\Users\User\Documents\Project\fix\fix\obj\Debug\fix.Migrations.AddNameMembersh
 C:\Users\User\Documents\Project\fix\fix\obj\Debug\fix.Migrations.AddBirthdateCostumer.resources
 C:\Users\User\Documents\Project\fix\fix\obj\Debug\fix.Migrations.AddMoviesTable.resources
 C:\Users\User\Documents\Project\fix\fix\obj\Debug\fix.Migrations.PopulationMovies.resources
+C:\Users\User\Documents\Project\fix\fix\obj\Debug\fix.Migrations.AddGenreMovies.resources
+C:\Users\User\Documents\Project\fix\fix\obj\Debug\fix.Migrations.InputDBGenre.resources
+C:\Users\User\Documents\Project\fix\fix\obj\Debug\fix.Migrations.TryToRoll.resources
+C:\Users\User\Documents\Project\fix\fix\obj\Debug\fix.Migrations.tryAddDBMoviesAgain.resources

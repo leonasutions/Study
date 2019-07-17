@@ -8,7 +8,6 @@ namespace fix.ViewModel
 {
     public class ViewCustModel
     {
-        public Movies Movies { get; set; }
         public List<Customers> Customers { get; set; }
     }
 }
