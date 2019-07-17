@@ -13,6 +13,7 @@
     </thead>
     <tbody>
         @foreach (var customer in Model)
+
         {
             <tr>
                 <td>@Html.ActionLink(customer.Name, "Details", "Customer", new { id = customer.Id }, null)</td>

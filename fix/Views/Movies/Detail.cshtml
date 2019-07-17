@@ -1,0 +1,21 @@
+﻿@model fix.Models.Movies
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.Name</h2>
+<ul>
+    <li>
+        Genre :@Model.Genre
+    </li>
+    <li>
+        Release Date :@Model.ReleaseDate.Value.ToShortDateString()
+    </li>
+    <li>
+        Data Added :@Model.DateAdded.Value.ToShortDateString()
+    </li>
+    <li>
+        Number in Stock :@Model.stock
+    </li>
+</ul>

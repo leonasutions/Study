@@ -1,0 +1,26 @@
+﻿
+@model IEnumerable<fix.Models.Movies>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Movies</th>
+            <th>Genre</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        @foreach (var mov in Model)
+        {
+            <tr>
+                <td>@Html.ActionLink(mov.Name, "Detail", "Movies", new { id = mov.Id }, null)</td>
+                <td>@mov.Genre</td>
+            </tr>
+
+        }
+    </tbody>
+</table>

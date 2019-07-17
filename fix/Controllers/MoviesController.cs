@@ -9,11 +9,35 @@ namespace fix.Controllers
 {
     public class MoviesController : Controller
     {
-        // GET: Movies
-        public ActionResult Random()
+        private ApplicationDbContext _context;
+
+        public MoviesController()
         {
-            var movie = new Movies() { Name = "Shrek!" };
-            return View(movie);
+            _context = new ApplicationDbContext();
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            _context.Dispose();
+        }
+        // GET: Movies
+        public ActionResult Index()
+        {
+            var movies = _context.Movies.ToList();
+
+            return View(movies);
+        }
+
+
+        public ActionResult Detail(int id)
+        {
+            var movies = _context.Movies.SingleOrDefault(c => c.Id == id);
+
+
+            if (movies == null)
+                return HttpNotFound();
+
+            return View(movies);
         }
     }
 }
