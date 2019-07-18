@@ -227,6 +227,10 @@
     <Compile Include="Migrations\201907170952485_tryAddDBMoviesAgain.Designer.cs">
       <DependentUpon>201907170952485_tryAddDBMoviesAgain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201907180119240_TryConver.cs" />
+    <Compile Include="Migrations\201907180119240_TryConver.Designer.cs">
+      <DependentUpon>201907180119240_TryConver.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customers.cs" />
@@ -362,6 +366,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201907170952485_tryAddDBMoviesAgain.resx">
       <DependentUpon>201907170952485_tryAddDBMoviesAgain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907180119240_TryConver.resx">
+      <DependentUpon>201907180119240_TryConver.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
