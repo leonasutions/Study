@@ -10,10 +10,12 @@ namespace fix. Models
     public class Customers
     {
         public int Id { get; set; }
-        [Required]
+        
+        [Required(ErrorMessage = "Please Enter Customer's Name")]
         [StringLength(255)]
         public string Name { get; set; }
         [Display(Name = "Date of Birth")]
+        [Min18YearIfAMember]
         public DateTime? Birthdate { get; set; }
         public bool IsSubscribedToNewsLetter { get; set; }  
        

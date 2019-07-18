@@ -54,6 +54,7 @@ namespace fix.Controllers
             var genre = _context.Genre.ToList();
             var viewModel = new MoviesFormViewModel
                 {
+                    Movie = new Movie(),
                     Genres = genre
                 }
                 ;
@@ -65,6 +66,16 @@ namespace fix.Controllers
         public ActionResult Save(Movie movie
         )
         {
+
+            if (!ModelState.IsValid)
+            {
+                var viewModel = new MoviesFormViewModel()
+                {
+                    Movie = movie,
+                    Genres = _context.Genre.ToList()
+                };
+                return View("MoviesForm", viewModel);
+            }
             if (movie.Id == 0)
             {
                 _context.Movies.Add(movie);

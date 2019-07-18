@@ -231,6 +231,10 @@
     <Compile Include="Migrations\201907180119240_TryConver.Designer.cs">
       <DependentUpon>201907180119240_TryConver.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201907180332446_TryToUpdatE.cs" />
+    <Compile Include="Migrations\201907180332446_TryToUpdatE.Designer.cs">
+      <DependentUpon>201907180332446_TryToUpdatE.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customers.cs" />
@@ -238,6 +242,7 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
+    <Compile Include="Models\Min18YearIfAMember.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -369,6 +374,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201907180119240_TryConver.resx">
       <DependentUpon>201907180119240_TryConver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907180332446_TryToUpdatE.resx">
+      <DependentUpon>201907180332446_TryToUpdatE.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -22,9 +22,11 @@ namespace fix.Models
 
         public DateTime? DateAdded { get; set; }
 
+        [Required]
         [Display(Name = "Release Date")]
         public DateTime? ReleaseDate { get; set; }
-
+        [Range(1, 20, ErrorMessage = "Stock Must Be 1-20")]
+        [Required]
         [Display(Name = "Number in Stock")]
         public byte NumberInStock { get; set; }
     }

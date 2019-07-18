@@ -98,3 +98,4 @@ C:\Users\User\Documents\Project\fix\fix\obj\Debug\fix.Migrations.InputDBGenre.re
 C:\Users\User\Documents\Project\fix\fix\obj\Debug\fix.Migrations.TryToRoll.resources
 C:\Users\User\Documents\Project\fix\fix\obj\Debug\fix.Migrations.tryAddDBMoviesAgain.resources
 C:\Users\User\Documents\Project\fix\fix\obj\Debug\fix.Migrations.TryConver.resources
+C:\Users\User\Documents\Project\fix\fix\obj\Debug\fix.Migrations.TryToUpdatE.resources

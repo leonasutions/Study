@@ -23,6 +23,7 @@ namespace fix.Controllers
             var membershiptype = _context.MembershipTypes.ToList();
             var viewModel = new CustomerFormViewModel
             {
+                customers = new Customers(),
                 MembershipTypes = membershiptype
             }
             ;
@@ -31,9 +32,22 @@ namespace fix.Controllers
             return View("CustomerForm", viewModel);
         }
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Save(Customers customers
         )
         {
+
+            if (!ModelState.IsValid)
+            {
+                var viewModel = new CustomerFormViewModel
+                {
+                    customers = customers,
+                    MembershipTypes = _context.MembershipTypes.ToList()
+                };
+                return View("CustomerForm",viewModel);
+            }
+
+            
             if (customers.Id==0)
             {
                 _context.Customers.Add(customers);
