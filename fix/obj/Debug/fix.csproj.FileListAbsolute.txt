@@ -99,3 +99,11 @@ C:\Users\User\Documents\Project\fix\fix\obj\Debug\fix.Migrations.TryToRoll.resou
 C:\Users\User\Documents\Project\fix\fix\obj\Debug\fix.Migrations.tryAddDBMoviesAgain.resources
 C:\Users\User\Documents\Project\fix\fix\obj\Debug\fix.Migrations.TryConver.resources
 C:\Users\User\Documents\Project\fix\fix\obj\Debug\fix.Migrations.TryToUpdatE.resources
+C:\Users\User\Documents\Project\fix\fix\bin\System.Net.Http.Formatting.dll
+C:\Users\User\Documents\Project\fix\fix\bin\System.Web.Http.dll
+C:\Users\User\Documents\Project\fix\fix\bin\System.Web.Http.WebHost.dll
+C:\Users\User\Documents\Project\fix\fix\bin\System.Net.Http.Formatting.xml
+C:\Users\User\Documents\Project\fix\fix\bin\System.Web.Http.xml
+C:\Users\User\Documents\Project\fix\fix\bin\System.Web.Http.WebHost.xml
+C:\Users\User\Documents\Project\fix\fix\bin\AutoMapper.dll
+C:\Users\User\Documents\Project\fix\fix\bin\AutoMapper.xml
