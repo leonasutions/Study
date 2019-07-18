@@ -16,7 +16,7 @@ namespace fix.Dtos
         [Required(ErrorMessage = "Please Enter Customer's Name")]
         [StringLength(255)]
         public string Name { get; set; }
-        [Min18YearIfAMember]
+        //[Min18YearIfAMember]
         public DateTime? Birthdate { get; set; }
         public bool IsSubscribedToNewsLetter { get; set; }
 

@@ -26,24 +26,24 @@ namespace fix.Controllers.Api
             return _context.Customers.ToList().Select(Mapper.Map<Customers, CustomerDto>);
         }
 
-        public CustomerDto GetCustomer(int id)
+        public IHttpActionResult GetCustomer(int id)
         {
             var customer = _context.Customers.SingleOrDefault(c => c.Id == id);
             if (customer == null)
             {
-                throw new HttpResponseException(HttpStatusCode.NotFound);
+                return NotFound();
 
             }
-            return Mapper.Map<Customers, CustomerDto>(customer);
+            return Ok(Mapper.Map<Customers, CustomerDto>(customer));
 
         }
         [HttpPost]
 
-        public CustomerDto CreateCustomer(CustomerDto customerDto)
+        public IHttpActionResult CreateCustomer(CustomerDto customerDto)
         {
             if (!ModelState.IsValid)
             {
-                throw new HttpResponseException(HttpStatusCode.BadRequest);
+                return BadRequest();
             }
 
             var customer = Mapper.Map<CustomerDto, Customers>(customerDto);
@@ -53,9 +53,7 @@ namespace fix.Controllers.Api
             customerDto.Id = customer.Id;
 
 
-
-
-            return customerDto;
+            return Created(new Uri(Request.RequestUri + "/" + customer.Id),customerDto );
         }
         [HttpPut]
         public void UpdateCustomer(int id, CustomerDto customerDto)
@@ -82,15 +80,13 @@ namespace fix.Controllers.Api
         [HttpDelete]
         public void deleteCustomer(int id)
         {
-            if (!ModelState.IsValid)
-            {
-                throw new HttpResponseException(HttpStatusCode.BadRequest);
-            }
+           
 
             var customerInDb = _context.Customers.SingleOrDefault(c => c.Id == id);
 
             if (customerInDb == null)
             {
+
                 throw new HttpResponseException(HttpStatusCode.NotFound);
             }
 
